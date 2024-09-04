@@ -1,0 +1,42 @@
+﻿@model FoodFrenzy1.Models.Product
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<div class="row">
+    <div class="col-5">
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductPrice)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductPrice)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductPicture)
+        </dt>
+        
+        </dl>
+        </div>
+        <div>
+            
+            <a asp-action="Index">Back to List</a>
+            <a asp-controller="Cart" asp-action="Cart" asp-route-id="@Model.id">Add to cart</a> 
+
+            
+        </div>
+    </<div>
+        <div class="col-4">
+            <img src="@Model.ProductPicture" class="w-100" />
+        </div>
+</div>

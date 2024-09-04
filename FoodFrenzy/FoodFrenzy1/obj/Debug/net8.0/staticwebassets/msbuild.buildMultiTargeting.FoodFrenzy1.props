@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\FoodFrenzy1.props" />
+</Project>
